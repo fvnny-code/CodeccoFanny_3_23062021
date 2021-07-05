@@ -1,0 +1,72 @@
+/* j'ai choisi d'utiliser les reset d'Andy bell:
+https://piccalil.li/blog/a-modern-css-reset/
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements vith a list role */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults*/
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed; // optimiser la vitesse de chargement
+  line-height: 1.5; // pour une meilleure lisibilité du texte.
+}
+
+/* A elements taht don't have au class get default styles */
+a:not[class] {
+  text-decoration-skip-ink: auto;
+}
+/* Makes images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+/* @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+*/
