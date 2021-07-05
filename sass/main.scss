@@ -1,43 +1,152 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 @import url(base/reset.scss);
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
+  margin: 0 auto;
 }
 .header_home {
-  & .header_logo {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+  position: relative;
+
+  & .header__logo {
     font-family: "Shrikhand", cursive;
     margin: 0;
     text-align: center;
   }
 }
+
+.where {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background: #f3f3f3;
+  font-size: 1.2rem;
+  font-weight: bold;
+  & .fa-map-marker-alt {
+    margin-right: 1rem;
+  }
+}
+
+.about {
+  & .container {
+    padding: 3rem;
+    text-align: center;
+    & .about__content {
+      margin: 2rem 0;
+    }
+    & .about__btn {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      // font-size: 1.2rem;
+      background-color: #ff79da;
+      border-radius: 100px;
+      box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
+      padding: 0.75rem 1.5rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.how {
+  & .container {
+    max-width: 64rem;
+    padding: 0 1rem;
+
+    // & .auto-grid {
+    //   display: grid;
+    //   grid-template-columns: repeat(
+    //     auto-fill,
+    //     minmax(var(--auto-grid-min-size, 12rem), 1fr)
+    //   );
+    //   grid-gap: 1rem;
+    
+    & ol{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+      
+
+      & .step {
+        padding: 1.5rem;
+        margin: 1rem 0 1rem 0.5rem;
+        box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
+        border-radius: 1.5rem;
+        background: rgb(247, 247, 247);
+
+        & .tuto__icon {
+          color: #7e7e7e;
+          margin-right: 1rem;
+        }
+      }
+    /*}*/
+  }
+}
+
+#restaurants{
+  background: #f7f7f7;
+  padding: 2rem 1rem;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.card{
+  background: #FFF;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  & .card__img{
+    object-fit: cover;
+    height: 12rem;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 1rem 1rem 0 0;
+    
+  }
+  & .card__badge{
+    background:#99e2d0;
+    color: #1b6150;
+    padding: 0.5rem;
+    border-radius: 0.15rem;
+    
+  }
+  
+}
+
 footer {
   & .container {
     background: rgb(56, 55, 55);
     padding: 1rem;
-    width: 100%;
+   
   }
-  & .footer_logo {
+  & .footer__logo {
     font-family: "Shrikhand", cursive;
     text-align: left;
     color: #fff;
   }
-  & .footer_nav {
+  & .footer__nav {
     margin: O;
-    
-    & .footer_list {
+
+    & .footer__list {
       list-style: none;
       line-height: 1.5;
       padding: 0;
 
-      & .footer_link {
+      & .footer__link {
         color: #fff;
         text-decoration: none;
-      
       }
     }
   }
