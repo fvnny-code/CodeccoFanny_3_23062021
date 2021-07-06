@@ -103,6 +103,47 @@ main {
   font-size: xx-large;
 }
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.menu .submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu .submenu .submenu__title {
+  text-align: left;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu .submenu .submenu__title hr {
+  height: 0.25rem;
+  width: 3rem;
+  border: none;
+  background: #99e2d0;
+  position: absolute;
+  bottom: 0;
+}
+
 footer .container {
   background: #383737;
   padding: 1em;
