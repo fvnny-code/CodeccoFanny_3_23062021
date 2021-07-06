@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url(base/reset.scss);
+
+/* NE FONCTIONNE PAS */
+@import url(base/_reset.scss);
 
 body {
   font-family: "Roboto", sans-serif;

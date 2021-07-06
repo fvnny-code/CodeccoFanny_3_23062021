@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* NE FONCTIONNE PAS */
+@import url(base/_reset.scss);
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  cursor: pointer;
+}
+
+.header {
+  background: #fff;
+  padding: 1rem;
+  -webkit-box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+          box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header .header__link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header__link .header__back-arrow {
+  position: absolute;
+  left: -1rem;
+  color: #222;
+  height: 2rem;
+  width: 2rem;
+  padding: 1rem 0;
+}
+
+.header .header__logo {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  text-align: center;
+}
+
+.body__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 32rem;
+  max-width: 100%;
+}
+
+footer .container {
+  background: #383737;
+  padding: 1rem;
+}
+
+footer .footer__logo {
+  font-family: "Shrikhand", cursive;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+footer .footer__nav {
+  margin: O;
+}
+
+footer .footer__nav .footer__list {
+  list-style: none;
+  line-height: 1.5;
+  padding: 1rem 0;
+}
+
+footer .footer__nav .footer__list .footer__link {
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.7rem;
+}
+
+footer .footer__nav .footer__list .footer__link .footer__icon {
+  margin-right: 0.5rem;
+}
+/*# sourceMappingURL=menu.css.map */

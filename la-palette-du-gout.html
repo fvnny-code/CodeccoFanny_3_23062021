@@ -1,244 +1,220 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <script src="https://kit.fontawesome.com/06f20b66e3.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/menu.css" />
+    <script
+      src="https://kit.fontawesome.com/06f20b66e3.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- meta tags -->
     <title>Ohmyfood! - La-palette-du-gout</title>
-    <meta name="title" content="Ohmyfood! - La-palette-du-gout">
-    <meta name="description"
-        content="Ohmyfood! est une entreprise de commande de repas en ligne. Composez votre propre menu et réduisez votre temps d'attente dans les restaurants avec un menu préparé à l'avance.">
+    <meta name="title" content="Ohmyfood! - La-palette-du-gout" />
+    <meta
+      name="description"
+      content="Ohmyfood! est une entreprise de commande de repas en ligne. Composez votre propre menu et réduisez votre temps d'attente dans les restaurants avec un menu préparé à l'avance."
+    />
+  </head>
 
-</head>
-
-<body>
-    <header class="header header_back-arrow">
-        <div class="container_restaurant">
-            <a href="index.html">
-                <i class="fas fa-arrow-left"></i>
-                <!--flex-->
-            </a>
-            <h1 class="header_logo">Ohmyfood</h1>
-        </div>
+  <body>
+    <header class="header">
+      <div class="header__link">
+        <a href="index.html">
+          <i class="fas fa-arrow-left header__back-arrow"></i>
+        </a>
+      </div>
+      <h1 class="header__logo">Ohmyfood</h1>
     </header>
-    <div class="body_img">
-        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-    </div>
+
+    <img class="body__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""/>
 
     <main>
-        <header class="header_menu">
-            <h1 class="header_title">La palette du goût</h1>
-            <button class="header_btn">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-heart"></i>
-            </button>
-        </header>
+      <header class="header-menu">
+        <h1 class="header-menu__title">La palette du goût</h1>
+        <button class="header-menu__btn">
+          <i class="far fa-heart header-menu__icon--noBG"></i>
+          <i class="fas fa-heart header-menu__icon--BG"></i>
+        </button>
+      </header>
 
-        <section class="menu">
-            <div class="submenu">
-                <h2 class="submenu_title">Entrées</h2>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">Fricassée d'escargots</h3>
-                        <p class="submenu_item description">Au piment d'espelette</p>
-                    </div>
-                    <div class="submenu_item price">25€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Foie gras de canard mi-cuit
-                        </h3>
-                        <p class="submenu_item description">
-                            Et ses copeaux de truffe noire
-                        </p>
-                    </div>
-                    <div class="submenu_item price">35€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Oeuf au plat
-                        </h3>
-                        <p class="submenu_item description">
-                            Assaisonné à la truffe sur lit de caviar
-                        </p>
-                    </div>
-                    <div class="submenu_item price">20€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
+      <section class="menu">
+        <div class="submenu">
+          <h2 class="submenu__title">Entrées</h2>
+          <div class="submenu__item">
+            <div class="submenu__item-content">
+              <h3 class="submenu_item-title">Fricassée d'escargots</h3>
+              <p class="submenu__item-description">Au piment d'espelette</p>
             </div>
-            <div class="submenu">
-                <h2 class="submenu_title">Plats</h2>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Filet de boeuf aux herbes
-                        </h3>
-                        <p class="submenu_item description">
-                            Accompagné de sa ribambelle de légumes
-                        </p>
-                    </div>
-                    <div class="submenu_item price"> 40€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Parmentier de queue de boeuf
-                        </h3>
-                        <p class="submenu_item description">
-                            À la truffe noire sur sa purée de panais
-                        </p>
-                    </div>
-                    <div class="submenu_item price">35€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Filet de turbot
-                        </h3>
-                        <p class="submenu_item description">
-                            Aux agrumes
-                        </p>
-                    </div>
-                    <div class="submenu_item price">44€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
+            <div class="submenu__item-price">25€</div>
+            <div class="submenu__item-confirm">
+              <!--flex-->
+              <div class="submenu__item-iconWrap">
+                <i class="fas fa-check submenu__icon"></i>
+              </div>
             </div>
-            <div class="submenu">
-                <h2 class="submenu_title">Desserts</h2>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Paris-Brest
-                        </h3>
-                        <p class="submenu_item description">
-                            Revisité
-                        </p>
-                        <div class="submenu_item price">18€</div>
-                        <div class="submenu_item confirm">
-                            <!--flex-->
-                            <div class="submenu_item iconWrap">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Macaron au chocolat d'exception
-                        </h3>
-                        <p class="submenu_item description">
-                            Et glace à la vanille de Madagascar
-                        </p>
-                        <div class="submenu_item price">22€</div>
-                        <div class="submenu_item confirm">
-                            <!--flex-->
-                            <div class="submenu_item iconWrap">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Mousse au chocolat
-                        </h3>
-                        <p class="submenu_item description">
-                            Au piment d'Espelette et à la truffe noire
-                        </p>
-                        <div class="submenu_item price">23€</div>
-
-                        <div class="submenu_item confirm">
-                            <!--flex-->
-                            <div class="submenu_item iconWrap">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="submenu__item">
+            <div class="submenu_item-content">
+              <h3 class="submenu__item-title">Foie gras de canard mi-cuit</h3>
+              <p class="submenu__item-description">
+                Et ses copeaux de truffe noire
+              </p>
             </div>
-
-        </section>
-        <div class="btn-wrapper">
-            <button btn_command>Commander</button>
+            <div class="submenu__item-price">35€</div>
+            <div class="submenu__item-confirm">
+              <!--flex-->
+              <div class="submenu__item-iconWrap">
+                <i class="fas fa-check submenu__icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="submenu__item">
+            <div class="submenu__item-content">
+              <h3 class="submenu__item-title">Oeuf au plat</h3>
+              <p class="submenu__item-description">
+                Assaisonné à la truffe sur lit de caviar
+              </p>
+            </div>
+            <div class="submenu__item-price">20€</div>
+            <div class="submenu__item-confirm">
+              <!--flex-->
+              <div class="submenu__item-iconWrap">
+                <i class="fas fa-check submenu__icon"></i>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="submenu">
+          <h2 class="submenu__title">Plats</h2>
+          <div class="submenu__item">
+            <div class="submenu__item-content">
+              <h3 class="submenu__item-title">Filet de boeuf aux herbes</h3>
+              <p class="submenu__item-description">
+                Accompagné de sa ribambelle de légumes
+              </p>
+            </div>
+            <div class="submenu__item-price">40€</div>
+            <div class="submenu__item-confirm">
+              <!--flex-->
+              <div class="submenu__item-iconWrap">
+                <i class="fas fa-check submenu__icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="submenu__item">
+            <div class="submenu__item-content">
+              <h3 class="submenu__item-title">Parmentier de queue de boeuf</h3>
+              <p class="submenu__item-description">
+                À la truffe noire sur sa purée de panais
+              </p>
+            </div>
+            <div class="submenu__item-price">35€</div>
+            <div class="submenu__item-confirm">
+              <!--flex-->
+              <div class="submenu__item-iconWrap">
+                <i class="fas fa-check-submenu__icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class="submenu__item">
+            <div class="submenu__item-content">
+              <h3 class="submenu__item-title">Filet de turbot</h3>
+              <p class="submenu__item-description">Aux agrumes</p>
+            </div>
+            <div class="submenu__item-price">44€</div>
+            <div class="submenu__item-confirm">
+              <!--flex-->
+              <div class="submenu__item-iconWrap">
+                <i class="fas fa-check submenu__icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="submenu">
+          <h2 class="submenu__title">Desserts</h2>
+          <div class="submenu__item">
+            <div class="submenu__item-content">
+              <h3 class="submenu__item-title">Paris-Brest</h3>
+              <p class="submenu__item-description">Revisité</p>
+              <div class="submenu__item-price">18€</div>
+              <div class="submenu__item-confirm">
+                <!--flex-->
+                <div class="submenu__item-iconWrap">
+                  <i class="fas fa-check submenu__icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="submenu__item-content">
+              <h3 class="submenu__item-title">
+                Macaron au chocolat d'exception
+              </h3>
+              <p class="submenu__item-description">
+                Et glace à la vanille de Madagascar
+              </p>
+              <div class="submenu__item-price">22€</div>
+              <div class="submenu__item-confirm">
+                <!--flex-->
+                <div class="submenu__item-iconWrap">
+                  <i class="fas fa-check submenu__icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="submenu__item-content">
+              <h3 class="submenu__item-title">Mousse au chocolat</h3>
+              <p class="submenu__item-description">
+                Au piment d'Espelette et à la truffe noire
+              </p>
+              <div class="submenu__item-price">23€</div>
+
+              <div class="submenu__item-confirm">
+                <!--flex-->
+                <div class="submenu__item-iconWrap">
+                  <i class="fas fa-check submenu__icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="btn-wrapper">
+        <button btn_command>Commander</button>
+      </div>
     </main>
 
     <footer>
-        <div class="container">
-            <!--flex-->
-            <h1 class="footer_logo">Ohmyfood</h1>
-            <nav class="footer_nav">
-                <ul class="footer_list">
-                    <li class="footer_list-item">
-                        <a class="footer_link" href="#">
-                            <i class="fas fa-utensils"></i>
-                            Proposer un restaurant
-                        </a>
-                    </li>
-                    <li class="footer_list-item">
-                        <a class="footer_link" href="#">
-                            <i class="fas fa-hands-helping"></i>
-                            Devenir partenaire
-                        </a>
-                    </li>
-                    <li class="footer_list-item">
-                        <a class="footer_link" href="#">
-                            Mentions légales
-                        </a>
-                    </li>
-                    <li class="footer_list-item">
-                        <a class="footer_link" href="mailto:contact@ohmyfood.com">
-                            Contact
-                        </a>
-
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-
+      <div class="container">
+        <!--flex-->
+        <h1 class="footer__logo">Ohmyfood</h1>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a class="footer__link" href="#">
+                <i class="fas fa-utensils footer__icon"></i>
+                Proposer un restaurant
+              </a>
+            </li>
+            <li class="footer_list-item">
+              <a class="footer__link" href="#">
+                <i class="fas fa-hands-helping footer__icon"></i>
+                Devenir partenaire
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="#"> Mentions légales </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="mailto:contact@ohmyfood.com">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
