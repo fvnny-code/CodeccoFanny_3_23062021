@@ -10,7 +10,7 @@ body {
 
 .header_home {
   background: #fff;
-  padding: 1rem;
+  padding: 1em;
   -webkit-box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
           box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
   position: relative;
@@ -18,7 +18,7 @@ body {
 
 .header_home .header__logo {
   font-family: "Shrikhand", cursive;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -29,35 +29,34 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1.5rem 1rem;
+  padding: 1.5em 1em;
   background: #f3f3f3;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 .where .fa-map-marker-alt {
-  margin-right: 1rem;
+  margin-right: 1em;
 }
 
 .about .container {
-  padding: 3rem;
+  padding: 2em;
   text-align: center;
 }
 
 .about .container .about__content {
-  margin: 2rem 0;
+  margin: 2em 0;
 }
 
 .about .container .about__btn {
   text-decoration: none;
   color: #fff;
-  font-weight: bold;
   background-color: #ff79da;
-  border-radius: 100px;
+  border-radius: 2rem;
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
           box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
+  padding: 0.75em 1.5em;
+  margin-top: 1em;
 }
 
 .how {
@@ -71,7 +70,7 @@ body {
 }
 
 .how .how__title {
-  margin-left: 1rem;
+  margin-left: 1em;
   text-align: left;
 }
 
@@ -82,12 +81,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 1.5rem;
+  padding: 0 1.5em;
 }
 
 .how .container ol {
   list-style: none;
-  padding: 1rem;
+  padding: 0.75em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,9 +103,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 100%;
-  padding: 1.5rem;
-  margin: 0.8rem;
+  padding: 1.5em;
+  margin: 0.8em;
   -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
           box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
   border-radius: 1.5rem;
@@ -119,9 +117,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem;
+  padding: 0.5em;
   position: absolute;
-  left: -1rem;
+  left: -1em;
   background: #9356dc;
   color: #fff;
   border-radius: 3rem;
@@ -131,18 +129,18 @@ body {
 
 .how .container .step .step__icon {
   color: #7e7e7e;
-  padding: 0 0.5rem;
+  padding: 0 0.5em;
 }
 
 #restaurants {
   background: #f7f7f7;
-  padding: 2rem 1rem;
+  padding: 2em 1em;
 }
 
 .cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr,1);
+  -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
@@ -151,7 +149,7 @@ body {
 
 @media (min-width: 768px) {
   .cards {
-    -ms-grid-columns: (1fr,2);
+    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -170,11 +168,11 @@ body {
 .card .card__badge {
   background: #99e2d0;
   color: #1b6150;
-  padding: 0.5rem;
+  padding: 0.5em;
   border-radius: 0.15rem;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 1em;
+  top: 1em;
 }
 
 .card .card__img {
@@ -196,7 +194,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 1em;
 }
 
 .card .card__footer .card__content {
@@ -213,7 +211,7 @@ body {
 
 footer .container {
   background: #383737;
-  padding: 1rem;
+  padding: 1em;
 }
 
 footer .footer__logo {
@@ -229,8 +227,8 @@ footer .footer__nav {
 
 footer .footer__nav .footer__list {
   list-style: none;
-  line-height: 1.5;
-  padding: 1rem 0;
+  line-height: 1.5rem;
+  padding: 1em 0;
 }
 
 footer .footer__nav .footer__list .footer__link {
@@ -240,6 +238,6 @@ footer .footer__nav .footer__list .footer__link {
 }
 
 footer .footer__nav .footer__list .footer__link .footer__icon {
-  margin-right: 0.5rem;
+  margin-right: 0.5em;
 }
 /*# sourceMappingURL=main.css.map */
