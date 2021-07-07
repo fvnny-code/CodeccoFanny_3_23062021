@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="sass/menu.css">
     <script src="https://kit.fontawesome.com/06f20b66e3.js" crossorigin="anonymous"></script>
 
     <!-- meta tags -->
@@ -17,231 +17,202 @@
 </head>
 
 <body>
-    <header class="header header_back-arrow">
-        <div class="container_restaurant">
-            <a href="index.html">
-                <i class="fas fa-arrow-left"></i>
-                <!--flex-->
-            </a>
-            <h1 class="header_logo">Ohmyfood</h1>
+    <header class="header">
+        <div class="header__link">
+          <a href="index.html">
+            <i class="fas fa-arrow-left header__back-arrow"></i>
+          </a>
         </div>
-    </header>
-    <div class="body_img">
-        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-    </div>
+        <h1 class="header__logo">Ohmyfood</h1>
+      </header>
+
+        <img class="body__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
 
     <main>
-        <header class="header_menu">
-            <h1 class="header_title">Le délice des sens</h1>
-            <button class="header_btn">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-heart"></i>
-            </button>
-        </header>
-
-        <section class="menu">
-            <div class="submenu">
-                <h2 class="submenu_title">Entrées</h2>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">Tartare de thon
-                        </h3>
-                        <p class="submenu_item description">
-                            Assaisonné au yuzu
-                        </p>
+            <header class="header-menu">
+              <h1 class="header-menu__title">Le délice des sens</h1>
+              <button class="header-menu__btn">
+                <i class="far fa-heart icon--noBG"></i>
+                <i class="fas fa-heart icon--BG"></i>
+              </button>
+            </header>
+      
+            <section class="menu">
+              <div class="submenu">
+                  <div class="submenu__title">
+                      <h2>Entrées</h2>
+                      <hr>
+                  </div>
+                
+                <div class="submenu__item">
+                  <div class="submenu__item-content">
+                    <h3 class="submenu_item-title">Tartare de thon</h3>
+                    <p class="submenu__item-description">Assaisonné au yuzu</p>
+                  </div>
+                  <div class="submenu__item-price">25€</div>
+                  <div class="submenu__item-confirm">
+                    <!--flex-->
+                    <div class="submenu__item-iconWrap">
+                      <i class="fas fa-check submenu__icon"></i>
                     </div>
-                    <div class="submenu_item price">25€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Bouchée de homard croustillant 
-                        </h3>
-                        <p class="submenu_item description">
-                            Et sa farandole de petits légumes
-                        </p>
+                <div class="submenu__item">
+                  <div class="submenu__item-content">
+                    <h3 class="submenu_item-title">Bouchée de homard croustillant </h3>
+                    <p class="submenu__item-description">Et sa farandole de petits légumes</p>
+                  </div>
+                  <div class="submenu__item-price">35€</div>
+                  <div class="submenu__item-confirm">
+                    <!--flex-->
+                    <div class="submenu__item-iconWrap">
+                      <i class="fas fa-check submenu__icon"></i>
                     </div>
-                    <div class="submenu_item price">35€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Velouté de cèpes 
-                        </h3>
-                        <p class="submenu_item description">
-                            Aux truffes
-                        </p>
+                <div class="submenu__item">
+                  <div class="submenu__item-content">
+                    <h3 class="submenu__item-title">Velouté de cèpes</h3>
+                    <p class="submenu__item-description">Aux truffes</p>
+                  </div>
+                  <div class="submenu__item-price">20€</div>
+                  <div class="submenu__item-confirm">
+                    <!--flex-->
+                    <div class="submenu__item-iconWrap">
+                      <i class="fas fa-check submenu__icon"></i>
                     </div>
-                    <div class="submenu_item price">20€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="submenu">
+                  <div class="submenu__title">
+                      <h2>Plats</h2>
+                      <hr>
+                  </div>
+                
+                <div class="submenu__item">
+                  <div class="submenu__item-content">
+                    <h3 class="submenu__item-title">Poulet rôti aux herbes de Provence</h3>
+                    <p class="submenu__item-description">Et sa crème de truffe</p>
+                  </div>
+                  <div class="submenu__item-price">40€</div>
+                  <div class="submenu__item-confirm">
+                    <!--flex-->
+                    <div class="submenu__item-iconWrap">
+                      <i class="fas fa-check submenu__icon"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="submenu__item">
+                  <div class="submenu__item-content">
+                    <h3 class="submenu__item-title">Langouste rôtie</h3>
+                    <p class="submenu__item-description">Et ses légumes de saison</p>
+                  </div>
+                  <div class="submenu__item-price">35€</div>
+                  <div class="submenu__item-confirm">
+                    <!--flex-->
+                    <div class="submenu__item-iconWrap">
+                      <i class="fas fa-check submenu__icon"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="submenu__item">
+                  <div class="submenu__item-content">
+                    <h3 class="submenu__item-title">Côte de boeuf Angus</h3>
+                    <p class="submenu__item-description">Et sa purée de panais</p>
+                  </div>
+                  <div class="submenu__item-price">44€</div>
+                  <div class="submenu__item-confirm">
+                    <!--flex-->
+                    <div class="submenu__item-iconWrap">
+                      <i class="fas fa-check submenu__icon"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="submenu">
+                  <div class="submenu__title">
+                      <h2 >Desserts</h2>
+                      <hr>
+                  </div>
+                  <div class="submenu__item">
+                      <div class="submenu__item-content">
+                        <h3 class="submenu__item-title">Farandole de desserts</h3>
+                        <p class="submenu__item-description">Du chef</p>
+                      </div>
+                      <div class="submenu__item-price">18€</div>
+                      <div class="submenu__item-confirm">
+                        <!--flex-->
+                        <div class="submenu__item-iconWrap">
+                          <i class="fas fa-check submenu__icon"></i>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="submenu__item">
+                      <div class="submenu__item-content">
+                        <h3 class="submenu__item-title">Crème brulée</h3>
+                        <p class="submenu__item-description">Revisitée</p>
+                      </div>
+                      <div class="submenu__item-price">22€</div>
+                      <div class="submenu__item-confirm">
+                        <!--flex-->
+                        <div class="submenu__item-iconWrap">
+                          <i class="fas fa-check submenu__icon"></i>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="submenu__item">
+                      <div class="submenu__item-content">
+                        <h3 class="submenu__item-title">Tiramisu</h3>
+                        <p class="submenu__item-description">À la noisette</p>
+                      </div>
+                      <div class="submenu__item-price">23€</div>
+                      <div class="submenu__item-confirm">
+                        <!--flex-->
+                        <div class="submenu__item-iconWrap">
+                          <i class="fas fa-check submenu__icon"></i>
+                        </div>
+                      </div>
+                  </div>
+               
+             
+             
+      
+            </section>
+            <div class="btn-wrapper">
+              <button class= "btn__command">Commander</button>
             </div>
-            <div class="submenu">
-                <h2 class="submenu_title">Plats</h2>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Poulet rôti aux herbes de Provence 
-                        </h3>
-                        <p class="submenu_item description">
-                            Et sa crème de truffe
-                        </p>
-                    </div>
-                    <div class="submenu_item price">40€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Langouste rôtie 
-                        </h3>
-                        <p class="submenu_item description">
-                            Et ses légumes de saison
-                        </p>
-                    </div>
-                    <div class="submenu_item price">35€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Côte de boeuf Angus 
-                        </h3>
-                        <p class="submenu_item description">
-                            Et sa purée de panais
-                        </p>
-                    </div>
-                    <div class="submenu_item price">44€</div>
-                    <div class="submenu_item confirm">
-                        <!--flex-->
-                        <div class="submenu_item iconWrap">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="submenu">
-                <h2 class="submenu_title">Desserts</h2>
-                <div class="submenu_item">
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Farandole de desserts
-                        </h3>
-                        <p class="submenu_item description">
-                            Du chef
-                        </p>
-                        <div class="submenu_item price">18€</div>
-                        <div class="submenu_item confirm">
-                            <!--flex-->
-                            <div class="submenu_item iconWrap">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Crème brulée 
-                        </h3>
-                        <p class="submenu_item description">
-                            Revisitée
-                        </p>
-                        <div class="submenu_item price">22€</div>
-                        <div class="submenu_item confirm">
-                            <!--flex-->
-                            <div class="submenu_item iconWrap">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="submenu_item content">
-                        <h3 class="submenu_item title">
-                            Tiramisu 
-                        </h3>
-                        <p class="submenu_item description">
-                            À la noisette
-                        </p>
-                        <div class="submenu_item price">23€</div>
-
-                        <div class="submenu_item confirm">
-                            <!--flex-->
-                            <div class="submenu_item iconWrap">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <div class="btn-wrapper">
-            <button btn_command>Commander</button>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <!--flex-->
-            <h1 class="footer_logo">Ohmyfood</h1>
-            <nav class="footer_nav">
-                <ul class="footer_list">
-                    <li class="footer_list-item">
-                        <a class="footer_link" href="#">
-                            <i class="fas fa-utensils"></i>
-                            Proposer un restaurant
-                        </a>
-                    </li>
-                    <li class="footer_list-item">
-                        <a class="footer_link" href="#">
-                            <i class="fas fa-hands-helping"></i>
-                            Devenir partenaire
-                        </a>
-                    </li>
-                    <li class="footer_list-item">
-                        <a class="footer_link" href="#">
-                            Mentions légales
-                        </a>
-                    </li>
-                    <li class="footer_list-item">
-                        <a class="footer_link" href="mailto:contact@ohmyfood.com">
-                            Contact
-                        </a>
-
-                    </li>
+          </main>
+      
+          <footer>
+            <div class="container">
+              <!--flex-->
+              <h1 class="footer__logo">Ohmyfood</h1>
+              <nav class="footer__nav">
+                <ul class="footer__list">
+                  <li class="footer__list-item">
+                    <a class="footer__link" href="#">
+                      <i class="fas fa-utensils footer__icon"></i>
+                      Proposer un restaurant
+                    </a>
+                  </li>
+                  <li class="footer_list-item">
+                    <a class="footer__link" href="#">
+                      <i class="fas fa-hands-helping footer__icon"></i>
+                      Devenir partenaire
+                    </a>
+                  </li>
+                  <li class="footer__list-item">
+                    <a class="footer__link" href="#"> Mentions légales </a>
+                  </li>
+                  <li class="footer__list-item">
+                    <a class="footer__link" href="mailto:contact@ohmyfood.com">
+                      Contact
+                    </a>
+                  </li>
                 </ul>
-            </nav>
-
-        </div>
-
-    </footer>
-</body>
-
-</html>
+              </nav>
+            </div>
+          </footer>
+        </body>
+      </html>
