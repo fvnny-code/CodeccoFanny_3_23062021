@@ -16,7 +16,7 @@ body {
   box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
   position: relative;
 
-  & .header__logo {
+  .header__logo {
     font-family: "Shrikhand", cursive;
     margin: 0 auto;
     text-align: center;
@@ -30,23 +30,21 @@ body {
   background: #f3f3f3;
   font-size: 1.2rem;
   font-weight: bold;
-  & .fa-map-marker-alt {
+  .fa-map-marker-alt {
     margin-right: 1em;
   }
 }
 
 .about {
-  & .container {
+  .container {
     padding: 2em;
     text-align: center;
-    & .about__content {
+    .about__content {
       margin: 2em 0;
     }
-    & .about__btn {
+    .about__btn {
       text-decoration: none;
       color: #fff;
-     
-      
       background-color: #ff79da;
       border-radius: 2rem;
       box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
@@ -60,25 +58,25 @@ body {
   display: flex;
   flex-direction: column;
 
-  & .how__title {
+  .how__title {
     margin-left: 1em;
     text-align: left;
   }
-  & .container {
+  .container {
     display: flex;
     justify-content: center;
     // max-width: 64rem;
     padding: 0 1.5em;
-    & ol {
+    ol {
       list-style: none;
       padding: 0.75em;
       display: flex;
       flex-wrap: wrap;
     }
 
-    & .step {
+    .step {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       // max-width: 100%;
       padding: 1.5em;
@@ -87,7 +85,7 @@ body {
       border-radius: 1.5rem;
       background: rgb(247, 247, 247);
       position: relative;
-      & .step__counter {
+      .step__counter {
         text-align: center;
         align-items: center;
         padding: 0.5em;
@@ -99,7 +97,7 @@ body {
         height: 1rem;
         width: 1rem;
       }
-      & .step__icon {
+      .step__icon {
         color: #7e7e7e;
         padding: 0 0.5em;
       }
@@ -117,7 +115,7 @@ body {
   column-gap: 2rem;
   row-gap: 2rem;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -131,7 +129,7 @@ body {
   display: block;
   position: relative;
 
-  & .card__badge {
+  .card__badge {
     background: #99e2d0;
     color: #1b6150;
     padding: 0.5em;
@@ -140,24 +138,24 @@ body {
     right: 1em;
     top: 1em;
   }
-  & .card__img {
+  .card__img {
     object-fit: cover;
     height: 12rem;
     width: 100%;
     border: 0 solid transparent;
     border-radius: 1rem 1rem 0 0;
   }
-  & .card__footer {
+  .card__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    & .card__content {
+    .card__content {
       line-height: 1rem;
     }
-    & .card__btn {
+    .card__btn {
       font-size: xx-large;
-      & .menu__like--Bg {
+      .menu__like--Bg {
         display: none;
       }
     }
@@ -165,29 +163,29 @@ body {
 }
 
 footer {
-  & .container {
+  .container {
     background: rgb(56, 55, 55);
     padding: 1em;
   }
-  & .footer__logo {
+  .footer__logo {
     font-family: "Shrikhand", cursive;
     text-align: left;
     font-size: 1.5rem;
     color: #fff;
   }
-  & .footer__nav {
+  .footer__nav {
     margin: O;
 
-    & .footer__list {
+    .footer__list {
       list-style: none;
       line-height: 1.5rem;
       padding: 1em 0;
 
-      & .footer__link {
+      .footer__link {
         color: #fff;
         text-decoration: none;
         line-height: 1.7rem;
-        & .footer__icon {
+        .footer__icon {
           margin-right: 0.5em;
         }
       }
