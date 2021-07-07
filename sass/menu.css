@@ -35,7 +35,7 @@ body {
 .header .header__link .header__back-arrow {
   position: absolute;
   left: -5em;
-  color: #222;
+  color: #000;
   height: 2rem;
   width: 2rem;
   padding: 1em 0;
@@ -83,30 +83,31 @@ main {
 }
 
 .header-menu .header-menu__btn {
-  position: relative;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 1.5em;
 }
 
 .header-menu .header-menu__btn .icon--noBG {
   opacity: 1;
-  position: absolute;
-  top: 1rem;
   font-size: xx-large;
 }
 
 .header-menu .header-menu__btn .icon--BG {
   opacity: 0;
-  position: absolute;
-  top: 1rem;
+  color: #ff79da;
   font-size: xx-large;
 }
 
@@ -175,13 +176,13 @@ main {
       -ms-flex-align: center;
           align-items: center;
   line-height: 0.8rem;
+  font-size: 0.85rem;
   background: #fff;
   -webkit-box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
           box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
   border-radius: 1.5rem;
   padding: 0.5em 0.75em;
   margin: 1em 0;
-  font-size: 0.85rem;
 }
 
 .menu .submenu .submenu__item .submenu__item-content {
@@ -222,7 +223,8 @@ main {
   font-size: 1.2rem;
   text-decoration: none;
   color: #fff;
-  background-color: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
   border: none;
   border-radius: 2rem;
   -webkit-box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);

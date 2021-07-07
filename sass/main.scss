@@ -13,11 +13,11 @@ body {
 .header_home {
   background: #fff;
   padding: 1em;
-  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
   position: relative;
 
   .header__logo {
-    font-family: "Shrikhand", cursive;
+    font-family: "Shrikhand", cursive; //@import"./base/_typo"
     margin: 0 auto;
     text-align: center;
   }
@@ -45,9 +45,9 @@ body {
     .about__btn {
       text-decoration: none;
       color: #fff;
-      background-color: #ff79da;
+      background:linear-gradient(#ff79da, #9356dc); //linear-gradient($secondary, $primary);
       border-radius: 2rem;
-      box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
+      box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329); // $box-shadow
       padding: 0.75em 1.5em;
       margin-top: 1em;
     }
@@ -81,7 +81,7 @@ body {
       // max-width: 100%;
       padding: 1.5em;
       margin: 0.8em;
-      box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
+      box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075); // $box-shadow
       border-radius: 1.5rem;
       background: rgb(247, 247, 247);
       position: relative;
@@ -91,7 +91,7 @@ body {
         padding: 0.5em;
         position: absolute;
         left: -1em;
-        background: #9356dc;
+        background: #9356dc;//$sprimary
         color: #fff;
         border-radius: 3rem;
         height: 1rem;
@@ -124,14 +124,14 @@ body {
   background: #fff;
   border-radius: 1rem;
   text-decoration: none;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075); // $box-shadow
   color: inherit;
   display: block;
   position: relative;
 
   .card__badge {
-    background: #99e2d0;
-    color: #1b6150;
+    background: #99e2d0;//$tertiary
+    color: #1b6150; //$darken-tertiary
     padding: 0.5em;
     border-radius: 0.15rem;
     position: absolute;
@@ -157,18 +157,19 @@ body {
       font-size: xx-large;
       .menu__like--Bg {
         display: none;
+        color:#ff79da; // $secondary
       }
     }
   }
 }
 
-footer {
+footer { //@import"./layout/footer"
   .container {
     background: rgb(56, 55, 55);
     padding: 1em;
   }
   .footer__logo {
-    font-family: "Shrikhand", cursive;
+    font-family: "Shrikhand", cursive; //@import"./base/_typo"
     text-align: left;
     font-size: 1.5rem;
     color: #fff;

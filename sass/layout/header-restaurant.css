@@ -1,0 +1,103 @@
+.header {
+  background: #fff;
+  padding: 1em;
+  -webkit-box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+          box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .header__link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .header__link .header__back-arrow {
+  position: absolute;
+  left: -5em;
+  color: #000;
+  height: 2rem;
+  width: 2rem;
+  padding: 1em 0;
+}
+
+@media (min-width: 768px) {
+  .header .header__link .header__back-arrow {
+    left: -15rem;
+  }
+}
+
+.header .header__logo {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  text-align: center;
+}
+
+.body__img {
+  max-height: 40rem;
+  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main {
+  background: whitesmoke;
+  border-radius: 2rem 2rem 0 0;
+  padding: 1em;
+}
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-menu .header-menu__title {
+  font-family: "Shrikhand", cursive;
+  font-size: x-large;
+  text-align: left;
+}
+
+.header-menu .header-menu__btn {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1.5em;
+}
+
+.header-menu .header-menu__btn .icon--noBG {
+  opacity: 1;
+  font-size: xx-large;
+}
+
+.header-menu .header-menu__btn .icon--BG {
+  opacity: 0;
+  color: #ff79da;
+  font-size: xx-large;
+}
+/*# sourceMappingURL=header-restaurant.css.map */
