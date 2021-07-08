@@ -55,6 +55,8 @@ main {
   background: whitesmoke;
   border-radius: 2rem 2rem 0 0;
   padding: 1em;
+  margin-top: -4rem;
+  position: relative;
   
 }
 .header-menu { //@import"./layout/header-restaurant"
@@ -121,7 +123,7 @@ main {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      line-height: 0.8rem;
+      // line-height: 0.8rem;
       font-size: 0.85rem; //@import"./base/_typo"
 
       background: #fff;
@@ -132,11 +134,15 @@ main {
      
       .submenu__item-content {
         width: 85%;
-        .submenu__item-title {
-          overflow: hidden;
+        .submenu__item-title { // variable ? map ? fonction ?
+          overflow: hidden; 
+          text-overflow: ellipsis;
+          white-space: nowrap; 
         }
-        .submenu__item-description {
+        .submenu__item-description { // variable ? map ? fonction ?
           overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; 
         }
       }
       .submenu__item-price {
@@ -146,6 +152,9 @@ main {
       .submenu__item-confirm {
         align-self: flex-end;
         padding-bottom: 1em;
+        overflow: hidden; // variable ? map ? fonction ?
+        text-overflow: ellipsis;
+        white-space: nowrap; 
       }
     }
   }

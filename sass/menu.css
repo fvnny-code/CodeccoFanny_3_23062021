@@ -65,6 +65,8 @@ main {
   background: whitesmoke;
   border-radius: 2rem 2rem 0 0;
   padding: 1em;
+  margin-top: -4rem;
+  position: relative;
 }
 
 .header-menu {
@@ -176,7 +178,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 0.8rem;
   font-size: 0.85rem;
   background: #fff;
   -webkit-box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
@@ -192,10 +193,14 @@ main {
 
 .menu .submenu .submenu__item .submenu__item-content .submenu__item-title {
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu .submenu .submenu__item .submenu__item-content .submenu__item-description {
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu .submenu .submenu__item .submenu__item-price {
@@ -208,6 +213,9 @@ main {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding-bottom: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .btn-wrapper {
