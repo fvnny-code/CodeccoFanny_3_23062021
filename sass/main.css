@@ -5,7 +5,6 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  cursor: pointer;
 }
 
 .header_home {
@@ -23,6 +22,7 @@ body {
 }
 
 .where {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,9 +48,8 @@ body {
   margin: 2em 0;
 }
 
-.about .container .about__btn {
-  text-decoration: none;
-  color: #fff;
+.about .container .btn {
+  cursor: pointer;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 2rem;
@@ -58,6 +57,41 @@ body {
           box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
   padding: 0.75em 1.5em;
   margin-top: 1em;
+  margin: auto;
+  width: 15rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.about .container .btn:active {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+          box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffb3e9), to(#bb95e9));
+  background: linear-gradient(#ffb3e9, #bb95e9);
+}
+
+@media (min-width: 768px) {
+  .about .container .btn:hover {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+            box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffb3e9), to(#bb95e9));
+    background: linear-gradient(#ffb3e9, #bb95e9);
+  }
+}
+
+.about .container .btn .about__btn {
+  text-decoration: none;
+  color: #fff;
 }
 
 .how {
@@ -151,8 +185,8 @@ body {
 
 @media (min-width: 768px) {
   .cards {
-    -ms-grid-columns: 1fr, 1fr;
-        grid-template-columns: 1fr, 1fr;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -243,6 +277,3 @@ footer .footer__nav .footer__list .footer__link {
 footer .footer__nav .footer__list .footer__link .footer__icon {
   margin-right: 0.5em;
 }
-
-/*# sourceMappingURL=main.css.map */
-

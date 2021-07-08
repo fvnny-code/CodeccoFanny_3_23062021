@@ -8,13 +8,13 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  cursor: pointer;
+ 
 }
 
 .header {
   background: #fff;
   padding: 1em;
-  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);// $box-shadow
+  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -48,7 +48,6 @@ body {
   max-width: 100%;
   width: 100%;
   object-fit: cover;
-  
 }
 
 main {
@@ -57,9 +56,9 @@ main {
   padding: 1em;
   margin-top: -4rem;
   position: relative;
-  
 }
-.header-menu { //@import"./layout/header-restaurant"
+.header-menu {
+  //@import"./layout/header-restaurant"
   display: flex;
   justify-content: space-between;
 
@@ -70,6 +69,7 @@ main {
   }
   .header-menu__btn {
     // position: relative;
+    cursor: pointer;
     border: none;
     background-color: transparent;
     display: flex;
@@ -80,14 +80,13 @@ main {
 
     .icon--noBG {
       opacity: 1;
-     
 
       font-size: xx-large; //@import"./base/_typo"
     }
     .icon--BG {
       opacity: 0;
       color: #ff79da; //linear-gradient($secondary, $primary);
-      
+
       font-size: xx-large; //@import"./base/_typo"
     }
   }
@@ -119,6 +118,7 @@ main {
       }
     }
     .submenu__item {
+      cursor: pointer;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -131,18 +131,20 @@ main {
       border-radius: 1.5rem;
       padding: 0.5em 0.75em;
       margin: 1em 0;
-     
+
       .submenu__item-content {
         width: 85%;
-        .submenu__item-title { // variable ? map ? fonction ?
-          overflow: hidden; 
-          text-overflow: ellipsis;
-          white-space: nowrap; 
-        }
-        .submenu__item-description { // variable ? map ? fonction ?
+        .submenu__item-title {
+          // variable ? map ? fonction ?
           overflow: hidden;
           text-overflow: ellipsis;
-          white-space: nowrap; 
+          white-space: nowrap;
+        }
+        .submenu__item-description {
+          // variable ? map ? fonction ?
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
       }
       .submenu__item-price {
@@ -154,7 +156,7 @@ main {
         padding-bottom: 1em;
         overflow: hidden; // variable ? map ? fonction ?
         text-overflow: ellipsis;
-        white-space: nowrap; 
+        white-space: nowrap;
       }
     }
   }
@@ -165,6 +167,7 @@ main {
   padding: 1.5em;
 
   .btn__command {
+    cursor: pointer;
     font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
@@ -172,12 +175,38 @@ main {
     border: none;
     border-radius: 2rem;
     box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+         &:active {
+        transform: scale(1.15);
+
+        box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+        background: linear-gradient(
+          hsl(317, 100%, 85%),
+          hsl(267, 66%, 75%)
+        ); //peut-être remplacer par $gradient-btn--lighten ?
+      }
+      @media (min-width: 768px){
+        &:hover {
+          transform: scale(1.15);
+  
+          box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+          background: linear-gradient(
+            hsl(317, 100%, 85%),
+            hsl(267, 66%, 75%)
+          ); //peut-être remplacer par $gradient-btn--lighten ?
+        }
+      }
+
     padding: 0.75em 1.5em;
     margin-top: 1em;
+    
   }
 }
 
-footer { //@import"./layout/footer"
+footer {
+  //@import"./layout/footer"
   .container {
     background: rgb(56, 55, 55);
     padding: 1em;
