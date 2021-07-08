@@ -84,6 +84,7 @@ main {
 
 .header-menu .header-menu__btn {
   border: none;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,4 +265,3 @@ footer .footer__nav .footer__list .footer__link {
 footer .footer__nav .footer__list .footer__link .footer__icon {
   margin-right: 0.5rem;
 }
-/*# sourceMappingURL=menu.css.map */

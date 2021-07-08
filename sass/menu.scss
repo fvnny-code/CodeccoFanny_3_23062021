@@ -48,16 +48,14 @@ body {
   max-width: 100%;
   width: 100%;
   object-fit: cover;
+  
 }
 
 main {
   background: whitesmoke;
   border-radius: 2rem 2rem 0 0;
   padding: 1em;
-  //   @media (min-width: 768px) {
-  //     margin: auto;
-  //     width: 70%;
-  //   }
+  
 }
 .header-menu { //@import"./layout/header-restaurant"
   display: flex;
@@ -71,6 +69,7 @@ main {
   .header-menu__btn {
     // position: relative;
     border: none;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
