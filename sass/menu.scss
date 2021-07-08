@@ -8,7 +8,6 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
- 
 }
 
 .header {
@@ -129,8 +128,10 @@ main {
       background: #fff;
       box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
       border-radius: 1.5rem;
-      padding: 0.5em 0.75em;
+      padding: 0 0.75em;
       margin: 1em 0;
+      position: relative;
+
 
       .submenu__item-content {
         width: 85%;
@@ -152,8 +153,18 @@ main {
         padding-bottom: 1em;
       }
       .submenu__item-confirm {
-        align-self: flex-end;
-        padding-bottom: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0;
+        font-size: 1.5rem;
+        padding: 1.5em 0;
+        position: relative;
+        right: -0.5em;
+        // opacity: 1;
+        background: #99e2d0; //$tertiary
+        color: #fff;
+        border-radius: 0 1.5rem 1.5rem 0;
         overflow: hidden; // variable ? map ? fonction ?
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -171,14 +182,27 @@ main {
     font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
-    background: linear-gradient(#ff79da,#9356dc); //linear-gradient($secondary, $primary);
+    background: linear-gradient(
+      #ff79da,
+      #9356dc
+    ); //linear-gradient($secondary, $primary);
     border: none;
     border-radius: 2rem;
     box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
     transform: scale(1);
     transition-property: transform;
     transition-duration: 400ms;
-         &:active {
+    &:active {
+      transform: scale(1.15);
+
+      box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+      background: linear-gradient(
+        hsl(317, 100%, 85%),
+        hsl(267, 66%, 75%)
+      ); //peut-être remplacer par $gradient-btn--lighten ?
+    }
+    @media (min-width: 768px) {
+      &:hover {
         transform: scale(1.15);
 
         box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
@@ -187,21 +211,10 @@ main {
           hsl(267, 66%, 75%)
         ); //peut-être remplacer par $gradient-btn--lighten ?
       }
-      @media (min-width: 768px){
-        &:hover {
-          transform: scale(1.15);
-  
-          box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-          background: linear-gradient(
-            hsl(317, 100%, 85%),
-            hsl(267, 66%, 75%)
-          ); //peut-être remplacer par $gradient-btn--lighten ?
-        }
-      }
+    }
 
     padding: 0.75em 1.5em;
     margin-top: 1em;
-    
   }
 }
 

@@ -184,8 +184,9 @@ main {
   -webkit-box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
           box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
   border-radius: 1.5rem;
-  padding: 0.5em 0.75em;
+  padding: 0 0.75em;
   margin: 1em 0;
+  position: relative;
 }
 
 .menu .submenu .submenu__item .submenu__item-content {
@@ -211,9 +212,23 @@ main {
 }
 
 .menu .submenu .submenu__item .submenu__item-confirm {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  padding-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 0;
+  font-size: 1.5rem;
+  padding: 1.5em 0;
+  position: relative;
+  right: -0.5em;
+  background: #99e2d0;
+  color: #fff;
+  border-radius: 0 1.5rem 1.5rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
