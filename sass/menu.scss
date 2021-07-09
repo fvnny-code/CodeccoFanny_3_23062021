@@ -67,7 +67,7 @@ main {
     text-align: left;
   }
   .header-menu__btn {
-    // position: relative;
+    position: relative;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -76,21 +76,38 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 1.5em;
-
+    
+    transition : all 450ms;
+    transition-delay : 0, 150ms; 
+    
+    &:hover { 
+      transform: scale(1.2);
+      .icon--noBG{
+        opacity: 0;
+      }
+        .icon--BG{
+          opacity: 1;
+        
+        }
+      
+      }
     .icon--noBG {
       opacity: 1;
-
-      font-size: xx-large; //@import"./base/_typo"
+      font-size: xx-large;  
     }
     .icon--BG {
       opacity: 0;
-      color: #ff79da; //linear-gradient($secondary, $primary);
-
-      font-size: xx-large; //@import"./base/_typo"
+      background: linear-gradient(to right, #CF70C5, #9217CF);
+      background-clip: text;
+      //-webkit-background-clip: text;
+      color: transparent;
+      position: relative;
+      top: -1em;
+      font-size: xx-large;    
     }
+  
   }
 }
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -131,7 +148,6 @@ main {
       padding: 0 0.75em;
       margin: 1em 0;
       position: relative;
-
 
       .submenu__item-content {
         width: 85%;
@@ -190,9 +206,18 @@ main {
     border-radius: 2rem;
     box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
     transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
-    &:active {
+    transition: transform 400ms;
+    // &:active {
+    //   transform: scale(1.15);
+
+    //   box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+    //   background: linear-gradient(
+    //     hsl(317, 100%, 85%),
+    //     hsl(267, 66%, 75%)
+    //   ); //peut-être remplacer par $gradient-btn--lighten ?
+    // }
+    // @media (min-width: 768px) {
+    &:hover {
       transform: scale(1.15);
 
       box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
@@ -201,17 +226,7 @@ main {
         hsl(267, 66%, 75%)
       ); //peut-être remplacer par $gradient-btn--lighten ?
     }
-    @media (min-width: 768px) {
-      &:hover {
-        transform: scale(1.15);
-
-        box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-        background: linear-gradient(
-          hsl(317, 100%, 85%),
-          hsl(267, 66%, 75%)
-        ); //peut-être remplacer par $gradient-btn--lighten ?
-      }
-    }
+    // }
 
     padding: 0.75em 1.5em;
     margin-top: 1em;

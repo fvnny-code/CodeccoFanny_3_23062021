@@ -55,9 +55,18 @@ body {
       margin: auto;
       width: 15rem;
       transform: scale(1);
-      transition-property: transform;
-      transition-duration: 400ms;
-      &:active {
+      transition: transform 400ms;
+      // &:active {
+      //   transform: scale(1.15);
+
+      //   box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+      //   background: linear-gradient(
+      //     hsl(317, 100%, 85%),
+      //     hsl(267, 66%, 75%)
+      //   ); //peut-être remplacer par $gradient-btn--lighten ?
+      // }
+      // @media (min-width: 768px){
+      &:hover {
         transform: scale(1.15);
 
         box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
@@ -66,18 +75,8 @@ body {
           hsl(267, 66%, 75%)
         ); //peut-être remplacer par $gradient-btn--lighten ?
       }
-      @media (min-width: 768px){
-        &:hover {
-          transform: scale(1.15);
-  
-          box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-          background: linear-gradient(
-            hsl(317, 100%, 85%),
-            hsl(267, 66%, 75%)
-          ); //peut-être remplacer par $gradient-btn--lighten ?
-        }
-      }
-      
+      // }
+
       .about__btn {
         text-decoration: none;
         color: #fff;
@@ -148,9 +147,11 @@ body {
   row-gap: 2rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2,1fr); // écrire 1fr, 1fr tout le temps navigateur edge = fail// 
-    // dans main.css ligne 177 /* -ms-grid-columns: (1fr)[2]; */ = ok // 
-
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); // écrire 1fr, 1fr tout le temps navigateur edge = fail//
+    // dans main.css ligne 177 /* -ms-grid-columns: (1fr)[2]; */ = ok //
   }
 }
 
@@ -189,9 +190,33 @@ body {
     }
     .card__btn {
       font-size: xx-large;
-      .menu__like--Bg {
-        display: none;
-        color: #ff79da; // $secondary
+      position: relative;
+      transition: all 450ms;
+      
+
+      &:hover {
+        transform: scale(1.1);
+        
+        .icon--noBG {
+          opacity: 0;
+        }
+        .icon--BG {
+          opacity: 1;
+          animation: fadein 1s;
+        }
+      }
+      .icon--noBG {
+        opacity: 1;
+      }
+      .icon--BG {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        background: linear-gradient(to right, #cf70c5, #9217cf);
+        background-clip: text;
+        //-webkit-background-clip: text;
+        color : transparent;
+        //-webkit-text-fill-color: transparent;
       }
     }
   }

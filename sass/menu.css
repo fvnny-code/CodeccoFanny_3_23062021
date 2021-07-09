@@ -84,6 +84,7 @@ main {
 }
 
 .header-menu .header-menu__btn {
+  position: relative;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -101,6 +102,23 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 1.5em;
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
+  -webkit-transition-delay: 0, 150ms;
+          transition-delay: 0, 150ms;
+}
+
+.header-menu .header-menu__btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.header-menu .header-menu__btn:hover .icon--noBG {
+  opacity: 0;
+}
+
+.header-menu .header-menu__btn:hover .icon--BG {
+  opacity: 1;
 }
 
 .header-menu .header-menu__btn .icon--noBG {
@@ -110,7 +128,12 @@ main {
 
 .header-menu .header-menu__btn .icon--BG {
   opacity: 0;
-  color: #ff79da;
+  background: -webkit-gradient(linear, left top, right top, from(#CF70C5), to(#9217CF));
+  background: linear-gradient(to right, #CF70C5, #9217CF);
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  top: -1em;
   font-size: xx-large;
 }
 
@@ -257,34 +280,21 @@ main {
           box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 400ms;
-          transition-duration: 400ms;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
   padding: 0.75em 1.5em;
   margin-top: 1em;
 }
 
-.btn-wrapper .btn__command:active {
+.btn-wrapper .btn__command:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
   -webkit-box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
           box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
   background: -webkit-gradient(linear, left top, left bottom, from(#ffb3e9), to(#bb95e9));
   background: linear-gradient(#ffb3e9, #bb95e9);
-}
-
-@media (min-width: 768px) {
-  .btn-wrapper .btn__command:hover {
-    -webkit-transform: scale(1.15);
-            transform: scale(1.15);
-    -webkit-box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-            box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-    background: -webkit-gradient(linear, left top, left bottom, from(#ffb3e9), to(#bb95e9));
-    background: linear-gradient(#ffb3e9, #bb95e9);
-  }
 }
 
 footer .container {
