@@ -216,7 +216,6 @@ main {
 
 .menu .submenu .submenu__item .submenu__item-content {
   width: 85%;
-  line-height: 0.8em;
   padding: 0 0.75em;
   overflow: hidden;
   text-overflow: ellipsis;

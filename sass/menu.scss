@@ -147,7 +147,6 @@ main {
 
       .submenu__item-content {
         width: 85%;
-        line-height: 0.8em;
         padding: 0 0.75em;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -158,6 +157,7 @@ main {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+          
         }
         .submenu__item-description {
           // variable ? map ? fonction ?
