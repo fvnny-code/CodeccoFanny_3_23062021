@@ -7,6 +7,37 @@ body {
   margin: 0;
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(245, 245, 245, 0.8);
+  -webkit-animation: fadeout 3s forwards;
+          animation: fadeout 3s forwards;
+  z-index: 1000;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader i {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  animation: turn 3s alternate-reverse ease-out infinite;
+}
+
 .header_home {
   background: #fff;
   padding: 1em;

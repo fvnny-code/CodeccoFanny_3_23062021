@@ -146,9 +146,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -266,18 +266,18 @@ main {
   opacity: 100%;
   width: 2.5em;
   padding-right: 1em;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .menu .submenu .submenu__item .submenu__item-confirm:hover i {
   margin-left: 0.5em;
   -webkit-transform: rotate(-1turn);
           transform: rotate(-1turn);
-  -webkit-transition: -webkit-transform 800ms ease-in-out;
-  transition: -webkit-transform 800ms ease-in-out;
-  transition: transform 800ms ease-in-out;
-  transition: transform 800ms ease-in-out, -webkit-transform 800ms ease-in-out;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
 .btn-wrapper {
