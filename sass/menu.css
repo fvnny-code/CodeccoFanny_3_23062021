@@ -149,9 +149,6 @@ main {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
 }
 
 @media (min-width: 1024px) {
@@ -171,6 +168,16 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .menu .submenu {
+    width: 30%;
+  }
 }
 
 .menu .submenu .submenu__title {
@@ -189,6 +196,7 @@ main {
 }
 
 .menu .submenu .submenu__item {
+  width: 85%;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,6 +220,24 @@ main {
   margin: 1em;
   min-width: 40ch;
   position: relative;
+}
+
+.menu .submenu .submenu__item:hover .submenu__item-confirm {
+  opacity: 100%;
+  padding-right: 1em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.menu .submenu .submenu__item:hover .submenu__item-confirm i {
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
 .menu .submenu .submenu__item .submenu__item-content {
@@ -251,29 +277,24 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.5em;
-  padding: 1.5em 0;
+  height: 100%;
   background: #99e2d0;
   color: #fff;
   border-radius: 0 1.5rem 1.5rem 0;
+  height: 90px;
   opacity: 0;
 }
 
-.menu .submenu .submenu__item .submenu__item-confirm:hover {
-  opacity: 100%;
-  padding-right: 1em;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-.menu .submenu .submenu__item .submenu__item-confirm:hover i {
-  font-size: 1.5em;
-  margin-left: 0.5em;
-  -webkit-transform: rotate(-1turn);
-          transform: rotate(-1turn);
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+.menu .submenu .submenu__item .submenu__item-iconWrap {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .btn-wrapper {
