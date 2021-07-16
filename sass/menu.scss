@@ -148,7 +148,7 @@ main {
 
       .submenu__item-content {
         width: 85%;
-        padding: 0 0.75em;
+        padding: 0.2em 0.75em;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -169,22 +169,20 @@ main {
       }
       .submenu__item-price {
         align-self: flex-end;
-        padding: 2em 1em;
-        // overflow: hidden;
-        // text-overflow: ellipsis;
-        // white-space: nowrap;
+        padding: 1.5em 1em;
+       
       }
       .submenu__item-confirm {
         display: flex;
         align-items: center;
         justify-content: center;
         //width: 0;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         padding: 1.5em 0;
         background: #99e2d0; //$tertiary
         color: #fff;
         border-radius: 0 1.5rem 1.5rem 0;
-        position: relative;
+        //position: relative;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -198,6 +196,7 @@ main {
           //transform: translateX(-10%);
 
           i {
+            font-size: 1.5em;
             margin-left: 0.5em;
             transform: rotate(-1turn);
             transition: transform 400ms ease-in-out;
