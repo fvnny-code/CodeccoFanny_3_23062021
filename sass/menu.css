@@ -255,15 +255,11 @@ main {
   background: #99e2d0;
   color: #fff;
   border-radius: 0 1.5rem 1.5rem 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   opacity: 0;
 }
 
 .menu .submenu .submenu__item .submenu__item-confirm:hover {
   opacity: 100%;
-  width: 2.5em;
   padding-right: 1em;
   -webkit-transition: all .5s;
   transition: all .5s;

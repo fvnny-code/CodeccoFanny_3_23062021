@@ -183,15 +183,15 @@ main {
         color: #fff;
         border-radius: 0 1.5rem 1.5rem 0;
         //position: relative;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
         //transform: translate(20%);
         opacity: 0;
         
         &:hover {
           opacity: 100%;
-          width: 2.5em;
+          //width: 2.5em;
           padding-right: 1em;
           //transform: translateX(-10%);
 
