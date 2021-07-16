@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/* NE FONCTIONNE PAS */
-@import url(base/_reset.scss);
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -9,7 +7,6 @@ body {
 
 .loader {
   background-color: whitesmoke;
-  opacity: 0.5%;
   position: fixed;
   left: 0;
   top: 0;
@@ -24,8 +21,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: loader 3s;
-          animation: loader 3s;
+  -webkit-animation: loader 2s;
+          animation: loader 2s;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
   -webkit-animation-fill-mode: both;
