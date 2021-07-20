@@ -21,10 +21,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: loader 1.5s;
-          animation: loader 1.5s;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  -webkit-animation: loader 1s;
+          animation: loader 1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   z-index: 1000;
@@ -45,8 +45,8 @@ body {
   width: 1rem;
   background-color: #9256dc6e;
   border-radius: 50%;
-  -webkit-animation: jump 2s;
-          animation: jump 2s;
+  -webkit-animation: jump 1s;
+          animation: jump 1s;
   -webkit-animation-iteration-count: 3;
           animation-iteration-count: 3;
 }

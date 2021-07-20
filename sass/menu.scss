@@ -40,10 +40,11 @@ body {
 }
 
 .body__img {
-  max-height: 40rem;
+  max-height: 20rem;
   max-width: 100%;
   width: 100%;
   object-fit: cover;
+  overflow: hidden;
 }
 
 main {
@@ -54,12 +55,11 @@ main {
   position: relative;
 }
 .header-menu {
-  //@import"./layout/header-restaurant"
   display: flex;
   justify-content: space-between;
 
   .header-menu__title {
-    font-family: "Shrikhand", cursive; //@import"./base/_typo"
+    font-family: "Shrikhand", cursive; 
     font-size: x-large;
     text-align: left;
   }
@@ -109,15 +109,42 @@ main {
   // align-items: stretch;
   @media (min-width: 1024px) {
     flex-direction: row;
+   
   }
   .submenu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    @media (min-width: 1024px){
-      width: 30%;
 
+    animation: fadeupin 1s both;
+    // transform: scale(1);
+    transition: transform 500ms;
+    transition-timing-function: ease-in-out;
+
+    &__1{
+      animation-delay: 600ms;
+    }
+    &__2{
+      animation-delay: 800ms;
+    }
+    &__3{
+      animation-delay: 1000ms;
+    }
+    
+
+    @keyframes fadeupin {
+      0% {
+        opacity: 0;
+        // transform: translateY(0.25rem);
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      width: 30%;
     }
 
     .submenu__title {
@@ -148,6 +175,8 @@ main {
       margin: 1em;
       min-width: 40ch;
       position: relative;
+      
+      
       &:hover .submenu__item-confirm {
         opacity: 100%;
         //width: 2.5em;
@@ -228,16 +257,7 @@ main {
     box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
     transform: scale(1);
     transition: transform 400ms;
-    // &:active {
-    //   transform: scale(1.15);
-
-    //   box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-    //   background: linear-gradient(
-    //     hsl(317, 100%, 85%),
-    //     hsl(267, 66%, 75%)
-    //   ); //peut-être remplacer par $gradient-btn--lighten ?
-    // }
-    // @media (min-width: 768px) {
+  
     &:hover {
       transform: scale(1.15);
 
@@ -245,9 +265,9 @@ main {
       background: linear-gradient(
         hsl(317, 100%, 85%),
         hsl(267, 66%, 75%)
-      ); //peut-être remplacer par $gradient-btn--lighten ?
+      ); 
     }
-    // }
+
 
     padding: 0.75em 1.5em;
     margin-top: 1em;
