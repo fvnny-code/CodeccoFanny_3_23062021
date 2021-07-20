@@ -1,25 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* RESET */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+
+  margin: 0 auto;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+
+/* TYPO */
+/* Font-family */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
 }
+.header__logo,
+.footer__logo,
+.header-menu__title { 
+  font-family: "Shrikhand", cursive;
+}
+
+/* VARIABLES */
+
+
+$box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+$box-shadow--hover: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+
+$clr-primary: #9356DC;
+$clr-secondary: #FF79DA;
+$clr-tertiary: #99E2D0;
+
+$linear-gradient: $clr-secondary, $clr-primary;
+$linear-gradient--hover:#ffb3e9, #bb95e9;
+
 
 .header {
   background: #fff;
   padding: 1em;
-  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
+  box-shadow: $box-shadow;
   display: flex;
   flex-direction: row;
   justify-content: center;
 
-  .header__link {
+  &__link {
     position: relative;
     display: flex;
 
-    .header__back-arrow {
+    & i {
       position: absolute;
       left: -5em;
       color: #000;
@@ -32,8 +68,7 @@ body {
     }
   }
 
-  .header__logo {
-    font-family: "Shrikhand", cursive; //@import"./base/_typo"
+  &__logo {
     margin: 0;
     text-align: center;
   }
@@ -41,10 +76,7 @@ body {
 
 .body__img {
   max-height: 20rem;
-  max-width: 100%;
-  width: 100%;
   object-fit: cover;
-  overflow: hidden;
 }
 
 main {
@@ -58,16 +90,16 @@ main {
   display: flex;
   justify-content: space-between;
 
-  .header-menu__title {
-    font-family: "Shrikhand", cursive; 
+  &__title {
     font-size: x-large;
     text-align: left;
   }
-  .header-menu__btn {
+
+  &__btn {
     position: relative;
     cursor: pointer;
     border: none;
-    background-color: transparent;
+    background-color: $linear-gradient;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +111,7 @@ main {
 
     &:hover {
       transform: scale(1.2);
+
       .icon--noBG {
         opacity: 0;
       }
@@ -86,13 +119,14 @@ main {
         opacity: 1;
       }
     }
+
     .icon--noBG {
       opacity: 1;
       font-size: xx-large;
     }
     .icon--BG {
       opacity: 0;
-      background: linear-gradient(to right, #cf70c5, #9217cf);
+      background: $linear-gradient;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -106,10 +140,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  // align-items: stretch;
+
   @media (min-width: 1024px) {
     flex-direction: row;
-   
   }
   .submenu {
     display: flex;
@@ -118,25 +151,22 @@ main {
     width: 100%;
 
     animation: fadeupin 1s both;
-    // transform: scale(1);
     transition: transform 500ms;
     transition-timing-function: ease-in-out;
 
-    &__1{
+    &__1 {
       animation-delay: 600ms;
     }
-    &__2{
+    &__2 {
       animation-delay: 800ms;
     }
-    &__3{
+    &__3 {
       animation-delay: 1000ms;
     }
-    
 
     @keyframes fadeupin {
       0% {
         opacity: 0;
-        // transform: translateY(0.25rem);
       }
       100% {
         opacity: 1;
@@ -147,7 +177,7 @@ main {
       width: 30%;
     }
 
-    .submenu__title {
+    &__title {
       text-align: left;
       text-transform: uppercase;
       position: relative;
@@ -155,33 +185,30 @@ main {
         height: 0.25rem;
         width: 3rem;
         border: none;
-        background: #99e2d0; //$tertiary;
+        background: $clr-tertiary;
         position: absolute;
         bottom: 0;
       }
     }
-    .submenu__item {
+    &__item {
       width: 85%;
       cursor: pointer;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.85rem; //@import"./base/_typo"
+      font-size: 0.85rem;
       background: #fff;
-      box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
+      box-shadow: $box-shadow;
       border-radius: 1.5rem;
       padding: 0;
       margin: 1em;
       min-width: 40ch;
       position: relative;
-      
-      
+
       &:hover .submenu__item-confirm {
         opacity: 100%;
-        //width: 2.5em;
         padding-right: 1em;
-        //transform: translateX(-10%);
 
         i {
           font-size: 1.5em;
@@ -199,14 +226,12 @@ main {
         text-overflow: ellipsis;
         white-space: nowrap;
 
-        .submenu__item-title {
-          // variable ? map ? fonction ?
+        &__item-title {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
-        .submenu__item-description {
-          // variable ? map ? fonction ?
+        &__item-description {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -220,11 +245,10 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        //width: 0;
         font-size: 1.5em;
-        // padding: 1.5em 0;
+
         height: 100%;
-        background: #99e2d0; //$tertiary
+        background: $tertiary;
         color: #fff;
         border-radius: 0 1.5rem 1.5rem 0;
         height: 90px;
@@ -245,50 +269,40 @@ main {
 
   .btn__command {
     cursor: pointer;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #fff;
-    background: linear-gradient(
-      #ff79da,
-      #9356dc
-    ); //linear-gradient($secondary, $primary);
-    border: none;
-    border-radius: 2rem;
-    box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
-    transform: scale(1);
-    transition: transform 400ms;
-  
-    &:hover {
-      transform: scale(1.15);
-
-      box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-      background: linear-gradient(
-        hsl(317, 100%, 85%),
-        hsl(267, 66%, 75%)
-      ); 
-    }
-
 
     padding: 0.75em 1.5em;
     margin-top: 1em;
+
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient( $clr-secondary, $clr-primary);
+    border: none;
+    border-radius: 2rem;
+    box-shadow: $box-shadow;
+    transform: scale(1);
+    transition: transform 400ms;
+
+    &:hover {
+      transform: scale(1.15);
+      box-shadow: $box-shadow--hover;
+      background: $linear-gradient;
+    }
   }
 }
 
 footer {
-  //@import"./layout/footer"
   .container {
     background: rgb(56, 55, 55);
     padding: 1em;
   }
   .footer__logo {
-    font-family: "Shrikhand", cursive; //@import"./base/_typo"
+    margin: 0;
     text-align: left;
     font-size: 1.5rem;
     color: #fff;
   }
   .footer__nav {
-    margin: O;
-
     .footer__list {
       list-style: none;
       line-height: 1.5;
@@ -296,9 +310,9 @@ footer {
 
       .footer__link {
         color: #fff;
-        text-decoration: none; //
+        text-decoration: none;
         line-height: 1.7rem;
-        .footer__icon {
+        &__icon {
           margin-right: 0.5rem;
         }
       }

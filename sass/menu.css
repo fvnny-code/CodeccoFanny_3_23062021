@@ -1,10 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
+/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* TYPO */
+/* Font-family */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__logo,
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+}
+
+/* VARIABLES */
 .header {
   background: #fff;
   padding: 1em;
@@ -22,14 +46,14 @@ body {
           justify-content: center;
 }
 
-.header .header__link {
+.header__link {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header .header__link .header__back-arrow {
+.header__link i {
   position: absolute;
   left: -5em;
   color: #000;
@@ -39,24 +63,21 @@ body {
 }
 
 @media (min-width: 768px) {
-  .header .header__link .header__back-arrow {
+  .header__link i {
     left: -15rem;
   }
 }
 
-.header .header__logo {
-  font-family: "Shrikhand", cursive;
+.header__logo {
   margin: 0;
   text-align: center;
 }
 
 .body__img {
   max-height: 20rem;
-  max-width: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
 }
 
 main {
@@ -76,13 +97,13 @@ main {
           justify-content: space-between;
 }
 
-.header-menu .header-menu__title {
+.header-menu__title {
   font-family: "Shrikhand", cursive;
   font-size: x-large;
   text-align: left;
 }
 
-.header-menu .header-menu__btn {
+.header-menu__btn {
   position: relative;
   cursor: pointer;
   border: none;
@@ -107,25 +128,25 @@ main {
           transition-delay: 0, 150ms;
 }
 
-.header-menu .header-menu__btn:hover {
+.header-menu__btn:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.header-menu .header-menu__btn:hover .icon--noBG {
+.header-menu__btn:hover .icon--noBG {
   opacity: 0;
 }
 
-.header-menu .header-menu__btn:hover .icon--BG {
+.header-menu__btn:hover .icon--BG {
   opacity: 1;
 }
 
-.header-menu .header-menu__btn .icon--noBG {
+.header-menu__btn .icon--noBG {
   opacity: 1;
   font-size: xx-large;
 }
 
-.header-menu .header-menu__btn .icon--BG {
+.header-menu__btn .icon--BG {
   opacity: 0;
   background: -webkit-gradient(linear, left top, right top, from(#cf70c5), to(#9217cf));
   background: linear-gradient(to right, #cf70c5, #9217cf);
@@ -220,13 +241,13 @@ main {
   }
 }
 
-.menu .submenu .submenu__title {
+.menu .submenu__title {
   text-align: left;
   text-transform: uppercase;
   position: relative;
 }
 
-.menu .submenu .submenu__title hr {
+.menu .submenu__title hr {
   height: 0.25rem;
   width: 3rem;
   border: none;
@@ -235,7 +256,7 @@ main {
   bottom: 0;
 }
 
-.menu .submenu .submenu__item {
+.menu .submenu__item {
   width: 85%;
   cursor: pointer;
   display: -webkit-box;
@@ -262,14 +283,14 @@ main {
   position: relative;
 }
 
-.menu .submenu .submenu__item:hover .submenu__item-confirm {
+.menu .submenu__item:hover .submenu__item-confirm {
   opacity: 100%;
   padding-right: 1em;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.menu .submenu .submenu__item:hover .submenu__item-confirm i {
+.menu .submenu__item:hover .submenu__item-confirm i {
   font-size: 1.5em;
   margin-left: 0.5em;
   -webkit-transform: rotate(-1turn);
@@ -280,7 +301,7 @@ main {
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
-.menu .submenu .submenu__item .submenu__item-content {
+.menu .submenu__item .submenu__item-content {
   width: 85%;
   padding: 0.2em 0.75em;
   overflow: hidden;
@@ -288,25 +309,25 @@ main {
   white-space: nowrap;
 }
 
-.menu .submenu .submenu__item .submenu__item-content .submenu__item-title {
+.menu .submenu__item .submenu__item-content__item-title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.menu .submenu .submenu__item .submenu__item-content .submenu__item-description {
+.menu .submenu__item .submenu__item-content__item-description {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.menu .submenu .submenu__item .submenu__item-price {
+.menu .submenu__item .submenu__item-price {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 1.5em 1em;
 }
 
-.menu .submenu .submenu__item .submenu__item-confirm {
+.menu .submenu__item .submenu__item-confirm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +346,7 @@ main {
   opacity: 0;
 }
 
-.menu .submenu .submenu__item .submenu__item-iconWrap {
+.menu .submenu__item .submenu__item-iconWrap {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -349,6 +370,8 @@ main {
 
 .btn-wrapper .btn__command {
   cursor: pointer;
+  padding: 0.75em 1.5em;
+  margin-top: 1em;
   font-size: 1.2rem;
   text-decoration: none;
   color: #fff;
@@ -364,8 +387,6 @@ main {
   transition: -webkit-transform 400ms;
   transition: transform 400ms;
   transition: transform 400ms, -webkit-transform 400ms;
-  padding: 0.75em 1.5em;
-  margin-top: 1em;
 }
 
 .btn-wrapper .btn__command:hover {
@@ -383,14 +404,10 @@ footer .container {
 }
 
 footer .footer__logo {
-  font-family: "Shrikhand", cursive;
+  margin: 0;
   text-align: left;
   font-size: 1.5rem;
   color: #fff;
-}
-
-footer .footer__nav {
-  margin: O;
 }
 
 footer .footer__nav .footer__list {
@@ -405,6 +422,6 @@ footer .footer__nav .footer__list .footer__link {
   line-height: 1.7rem;
 }
 
-footer .footer__nav .footer__list .footer__link .footer__icon {
+footer .footer__nav .footer__list .footer__link__icon {
   margin-right: 0.5rem;
 }

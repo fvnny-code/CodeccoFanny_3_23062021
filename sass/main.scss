@@ -1,38 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* RESET */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+body {
+  
+  margin: 0 auto;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
 
-$background: #3E6898;
+/* TYPO */
+/* Font-family */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
 }
+.header__logo,
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+}
+
+/* VARIABLES */
+
+
+$box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+$box-shadow--hover: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+
+$clr-primary: #9356dc;
+$clr-secondary: #ff79da;
+$clr-tertiary: #99e2d0;
+
 
 .loader {
   background-color: rgb(245, 245, 245);
-  
-  
   position: fixed;
-  left:0;
+  left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  
+
   animation: loader 1s;
   animation-delay: 1.5s;
   animation-fill-mode: both;
   z-index: 1000;
 }
-.loader__itemContainer{
+.loader__itemContainer {
   width: 9rem;
   display: flex;
   justify-content: center;
- 
+
   .loader__item {
     height: 1rem;
     width: 1rem;
@@ -40,42 +67,42 @@ body {
     border-radius: 50%;
     animation: jump 1s;
     animation-iteration-count: 3;
-    &--2{
+    &--2 {
       animation-delay: 0.25s;
     }
-    &--3{
+    &--3 {
       animation-delay: 0.5s;
     }
-    &--4{
+    &--4 {
       animation-delay: 0.75s;
     }
-    &--5{
+    &--5 {
       animation-delay: 1s;
     }
-    }
   }
+}
 
-@keyframes loader{
-  0%{
+@keyframes loader {
+  0% {
     opacity: 1;
     z-index: 1000;
   }
-  100%{
+  100% {
     opacity: 0;
     z-index: -10;
   }
 }
-@keyframes jump{
-  0%{
+@keyframes jump {
+  0% {
     transform: translateY(0);
   }
-  25%{
+  25% {
     transform: translateY(0.5rem);
   }
-  75%{
+  75% {
     transform: translateY(-0.5rem);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
@@ -83,12 +110,10 @@ body {
 .header_home {
   background: #fff;
   padding: 1em;
-  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
+  box-shadow: $box-shadow;
   position: relative;
 
   .header__logo {
-    font-family: "Shrikhand", cursive; //@import"./base/_typo"
-    margin: 0 auto;
     text-align: center;
   }
 }
@@ -101,7 +126,7 @@ body {
   background: #f3f3f3;
   font-size: 1.2rem;
   font-weight: bold;
-  .fa-map-marker-alt {
+  & i {
     margin-right: 1em;
   }
 }
@@ -114,35 +139,25 @@ body {
       margin: 2em 0;
     }
     .btn {
+      text-decoration: none;
+        color: #fff;
+
       cursor: pointer;
-      background: linear-gradient(
-        #ff79da,
-        #9356dc
-      ); //linear-gradient($secondary, $primary);
+      background: linear-gradient( $clr-secondary, $clr-primary);
       border-radius: 2rem;
-      box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329); // $box-shadow
+      box-shadow: $box-shadow;
       padding: 0.75em 1.5em;
       margin-top: 1em;
       margin: auto;
       width: 15rem;
       transform: scale(1);
       transition: transform 400ms;
-      
+
       &:hover {
         transform: scale(1.15);
-
-        box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-        background: linear-gradient(
-          hsl(317, 100%, 85%),
-          hsl(267, 66%, 75%)
-        ); //peut-être remplacer par $gradient-btn--lighten ?
+        
       }
-      // }
-
-      .about__btn {
-        text-decoration: none;
-        color: #fff;
-      }
+      
     }
   }
 }
@@ -158,7 +173,6 @@ body {
   .container {
     display: flex;
     justify-content: center;
-    // max-width: 64rem;
     padding: 0 1.5em;
     ol {
       list-style: none;
@@ -171,26 +185,26 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      // max-width: 100%;
       padding: 1.5em;
       margin: 0.8em;
-      box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075); // $box-shadow
+      box-shadow: $box-shadow;
       border-radius: 1.5rem;
       background: rgb(247, 247, 247);
       position: relative;
-      .step__counter {
+
+      &__counter {
         text-align: center;
         align-items: center;
-        padding: 0.5em;
+        padding: 0.2em;
         position: absolute;
         left: -1em;
-        background: #9356dc; //$sprimary
+        background: $clr-primary;
         color: #fff;
         border-radius: 3rem;
-        height: 1rem;
-        width: 1rem;
+        height: 1.5rem;
+        width: 1.5rem;
       }
-      .step__icon {
+      &__icon {
         color: #7e7e7e;
         padding: 0 0.5em;
       }
@@ -198,7 +212,7 @@ body {
   }
 }
 
-#restaurants {
+.restaurants {
   background: #f7f7f7;
   padding: 2em 1em;
 }
@@ -209,11 +223,8 @@ body {
   row-gap: 2rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); // écrire 1fr, 1fr tout le temps navigateur edge = fail//
-    // dans main.css ligne 177 /* -ms-grid-columns: (1fr)[2]; */ = ok //
+    grid-template-columns: repeat(2,1fr);
+
   }
 }
 
@@ -221,14 +232,14 @@ body {
   background: #fff;
   border-radius: 1rem;
   text-decoration: none;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075); // $box-shadow
+  box-shadow: $box-shadow;
   color: inherit;
   display: block;
   position: relative;
 
   .card__badge {
-    background: #99e2d0; //$tertiary
-    color: #1b6150; //$darken-tertiary
+    background: $clr-tertiary;
+    color: #1b6150;
     padding: 0.5em;
     border-radius: 0.15rem;
     position: absolute;
@@ -247,14 +258,29 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    .card__content {
+    &__content {
       line-height: 1rem;
     }
-    .card__btn {
+    &__btn {
       font-size: xx-large;
       position: relative;
       transition: all 450ms;
 
+      // .icon--noBG {
+      //   opacity: 0;
+      // }
+
+      .icon--BG {
+        position: absolute;
+        opacity: 1;
+        left: 0;
+
+        background: linear-gradient(#a79ba3,#9356dc);
+        background-clip: text;
+      -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
       &:hover {
         transform: scale(1.1);
 
@@ -266,48 +292,30 @@ body {
           animation: fadein 1s;
         }
       }
-      .icon--noBG {
-        opacity: 1;
-      }
-      .icon--BG {
-        position: absolute;
-        opacity: 0;
-        left: 0;
-        background: linear-gradient(to right, #cf70c5, #9217cf);
-        background-clip: text;
-        //-webkit-background-clip: text;
-        color: transparent;
-        //-webkit-text-fill-color: transparent;
-      }
     }
   }
 }
 
 footer {
-  //@import"./layout/footer"
   .container {
     background: rgb(56, 55, 55);
     padding: 1em;
   }
   .footer__logo {
-    font-family: "Shrikhand", cursive; //@import"./base/_typo"
     text-align: left;
     font-size: 1.5rem;
     color: #fff;
   }
   .footer__nav {
-    margin: O;
-
     .footer__list {
       list-style: none;
       line-height: 1.5rem;
       padding: 1em 0;
-
       .footer__link {
         color: #fff;
         text-decoration: none;
         line-height: 1.7rem;
-        .footer__icon {
+        &__icon {
           margin-right: 0.5em;
         }
       }
