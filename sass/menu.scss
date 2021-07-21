@@ -10,6 +10,7 @@
 body {
   margin: 0 auto;
   padding: 0;
+  max-width: 1500px;
 }
 
 img {
@@ -53,6 +54,7 @@ $clr-tertiary: #99e2d0;
 
 
 /*------------------------*/
+
 
 
 .header {
@@ -216,7 +218,7 @@ main {
       border-radius: 1.5rem;
       padding: 0;
       margin: 1em;
-      min-width: 40ch;
+      // min-width: 40ch;
       position: relative;
 
       &:hover .submenu__item-confirm {
