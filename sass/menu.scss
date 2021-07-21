@@ -1,16 +1,40 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* RESET */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+/* TYPO */
+/* Font-family */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
 }
+
+.header__logo,
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+}
+
+
 
 .header {
   background: #fff;
   padding: 1em;
-  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
+  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -21,7 +45,7 @@ body {
 
     .header__back-arrow {
       position: absolute;
-      left: -5em;
+      left: -4.5em;
       color: #000;
       height: 2rem;
       width: 2rem;
@@ -33,7 +57,7 @@ body {
   }
 
   .header__logo {
-    font-family: "Shrikhand", cursive; //@import"./base/_typo"
+    font-family: "Shrikhand", cursive;
     margin: 0;
     text-align: center;
   }
@@ -59,9 +83,10 @@ main {
   justify-content: space-between;
 
   .header-menu__title {
-    font-family: "Shrikhand", cursive; 
+    font-family: "Shrikhand", cursive;
     font-size: x-large;
     text-align: left;
+   
   }
   .header-menu__btn {
     position: relative;
@@ -106,10 +131,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  // align-items: stretch;
+  align-items: start;
+  
   @media (min-width: 1024px) {
     flex-direction: row;
-   
   }
   .submenu {
     display: flex;
@@ -118,25 +143,23 @@ main {
     width: 100%;
 
     animation: fadeupin 1s both;
-    // transform: scale(1);
+
     transition: transform 500ms;
     transition-timing-function: ease-in-out;
 
-    &__1{
+    &__1 {
       animation-delay: 600ms;
     }
-    &__2{
+    &__2 {
       animation-delay: 800ms;
     }
-    &__3{
+    &__3 {
       animation-delay: 1000ms;
     }
-    
 
     @keyframes fadeupin {
       0% {
         opacity: 0;
-        // transform: translateY(0.25rem);
       }
       100% {
         opacity: 1;
@@ -150,12 +173,15 @@ main {
     .submenu__title {
       text-align: left;
       text-transform: uppercase;
-      position: relative;
+      position: relative; 
+      margin-left: 1.5em;
+
+      
       hr {
         height: 0.25rem;
         width: 3rem;
         border: none;
-        background: #99e2d0; //$tertiary;
+        background: #99e2d0;
         position: absolute;
         bottom: 0;
       }
@@ -167,21 +193,18 @@ main {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.85rem; //@import"./base/_typo"
+      font-size: 0.85rem;
       background: #fff;
-      box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
+      box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
       border-radius: 1.5rem;
       padding: 0;
       margin: 1em;
       min-width: 40ch;
       position: relative;
-      
-      
+
       &:hover .submenu__item-confirm {
         opacity: 100%;
-        //width: 2.5em;
         padding-right: 1em;
-        //transform: translateX(-10%);
 
         i {
           font-size: 1.5em;
@@ -200,13 +223,11 @@ main {
         white-space: nowrap;
 
         .submenu__item-title {
-          // variable ? map ? fonction ?
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
         .submenu__item-description {
-          // variable ? map ? fonction ?
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -220,11 +241,10 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        //width: 0;
+
         font-size: 1.5em;
-        // padding: 1.5em 0;
         height: 100%;
-        background: #99e2d0; //$tertiary
+        background: #99e2d0;
         color: #fff;
         border-radius: 0 1.5rem 1.5rem 0;
         height: 90px;
@@ -248,26 +268,19 @@ main {
     font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
-    background: linear-gradient(
-      #ff79da,
-      #9356dc
-    ); //linear-gradient($secondary, $primary);
+    background: linear-gradient(#ff79da, #9356dc);
     border: none;
     border-radius: 2rem;
-    box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329); // $box-shadow
+    box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
     transform: scale(1);
     transition: transform 400ms;
-  
+
     &:hover {
       transform: scale(1.15);
 
       box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
-      background: linear-gradient(
-        hsl(317, 100%, 85%),
-        hsl(267, 66%, 75%)
-      ); 
+      background: linear-gradient(hsl(317, 100%, 85%), hsl(267, 66%, 75%));
     }
-
 
     padding: 0.75em 1.5em;
     margin-top: 1em;
@@ -275,13 +288,13 @@ main {
 }
 
 footer {
-  //@import"./layout/footer"
+ 
   .container {
     background: rgb(56, 55, 55);
     padding: 1em;
   }
   .footer__logo {
-    font-family: "Shrikhand", cursive; //@import"./base/_typo"
+    font-family: "Shrikhand", cursive; 
     text-align: left;
     font-size: 1.5rem;
     color: #fff;
@@ -296,7 +309,7 @@ footer {
 
       .footer__link {
         color: #fff;
-        text-decoration: none; //
+        text-decoration: none; 
         line-height: 1.7rem;
         .footer__icon {
           margin-right: 0.5rem;

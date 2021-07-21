@@ -1,8 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+*,
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* TYPO */
+/* Font-family */
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
+}
+
+.header__logo,
+.footer__logo {
+  font-family: "Shrikhand", cursive;
 }
 
 .header {
@@ -31,7 +54,7 @@ body {
 
 .header .header__link .header__back-arrow {
   position: absolute;
-  left: -5em;
+  left: -4.5em;
   color: #000;
   height: 2rem;
   width: 2rem;
@@ -148,6 +171,9 @@ main {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 @media (min-width: 1024px) {
@@ -224,6 +250,7 @@ main {
   text-align: left;
   text-transform: uppercase;
   position: relative;
+  margin-left: 1.5em;
 }
 
 .menu .submenu .submenu__title hr {
