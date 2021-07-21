@@ -28,6 +28,25 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+/* ANIMATIONS */
+/* Keyframes */
+@-webkit-keyframes fadeupin {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeupin {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .header {
   background: #fff;
   padding: 1em;
@@ -220,24 +239,6 @@ main {
 .menu .submenu__3 {
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
-}
-
-@-webkit-keyframes fadeupin {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeupin {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @media (min-width: 1024px) {

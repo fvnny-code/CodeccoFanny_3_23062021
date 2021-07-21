@@ -29,6 +29,19 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+/* ANIMATIONS */
+/* Keyframes */
+
+@keyframes fadeupin {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 
 .header {
@@ -132,7 +145,7 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
-  
+
   @media (min-width: 1024px) {
     flex-direction: row;
   }
@@ -157,14 +170,7 @@ main {
       animation-delay: 1000ms;
     }
 
-    @keyframes fadeupin {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+    
 
     @media (min-width: 1024px) {
       width: 30%;
