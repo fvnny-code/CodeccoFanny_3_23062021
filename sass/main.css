@@ -166,8 +166,6 @@ body {
 }
 
 .header_home .header__logo {
-  font-family: "Shrikhand", cursive;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -322,7 +320,7 @@ body {
 
 @media (min-width: 768px) {
   .cards {
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
   }
 }
