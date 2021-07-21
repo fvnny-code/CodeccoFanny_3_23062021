@@ -29,6 +29,17 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+/* VARIABLES */
+
+
+$box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+$box-shadow--hover: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+
+$clr-primary: #9356dc;
+$clr-secondary: #ff79da;
+$clr-tertiary: #99e2d0;
+
+
 /* ANIMATIONS */
 /* Keyframes */
 
@@ -59,7 +70,7 @@ body {
 }
 
 
-
+/*------------------------*/
 
 .loader {
   background-color: rgb(245, 245, 245);
@@ -109,7 +120,7 @@ body {
 .header_home {
   background: #fff;
   padding: 1em;
-  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+  box-shadow: $box-shadow;
   position: relative;
 
   .header__logo {
@@ -124,7 +135,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 1.5em 1em;
-  background: #f3f3f3;
+  background: whitesmoke;
   font-size: 1.2rem;
   font-weight: bold;
   .fa-map-marker-alt {
@@ -141,9 +152,9 @@ body {
     }
     .btn {
       cursor: pointer;
-      background: linear-gradient(#ff79da, #9356dc);
+      background: linear-gradient($clr-secondary, $clr-primary);
       border-radius: 2rem;
-      box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
+      box-shadow: $box-shadow;
       padding: 0.75em 1.5em;
       margin-top: 1em;
       margin: auto;
@@ -154,7 +165,7 @@ body {
       &:hover {
         transform: scale(1.15);
 
-        box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+        box-shadow: $box-shadow--hover;
         background: linear-gradient(hsl(317, 100%, 85%), hsl(267, 66%, 75%));
       }
 
@@ -192,9 +203,9 @@ body {
       align-items: center;
       padding: 1.5em;
       margin: 0.8em;
-      box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
+      box-shadow: $box-shadow;
       border-radius: 1.5rem;
-      background: rgb(247, 247, 247);
+      background: whitesmoke;
       position: relative;
       .step__counter {
         text-align: center;
@@ -202,7 +213,7 @@ body {
         padding: 0.2em;
         position: absolute;
         left: -1em;
-        background: #9356dc;
+        background: $clr-primary;
         color: #fff;
         border-radius: 3rem;
         height: 1.5rem;
@@ -236,13 +247,13 @@ body {
   background: #fff;
   border-radius: 1rem;
   text-decoration: none;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
+  box-shadow: $box-shadow;
   color: inherit;
   display: block;
   position: relative;
 
   .card__badge {
-    background: #99e2d0;
+    background: $clr-tertiary;
     color: #1b6150; 
     padding: 0.5em;
     border-radius: 0.15rem;
@@ -288,7 +299,7 @@ body {
         position: absolute;
         opacity: 0;
         left: 0;
-        background: linear-gradient(to right, #cf70c5, #9217cf);
+        background: linear-gradient(to right,$clr-secondary, $clr-primary);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;

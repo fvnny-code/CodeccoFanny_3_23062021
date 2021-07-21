@@ -29,6 +29,16 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+/* VARIABLES */
+
+
+$box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+$box-shadow--hover: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+
+$clr-primary: #9356dc;
+$clr-secondary: #ff79da;
+$clr-tertiary: #99e2d0;
+
 /* ANIMATIONS */
 /* Keyframes */
 
@@ -42,12 +52,13 @@ body {
 }
 
 
+/*------------------------*/
 
 
 .header {
   background: #fff;
   padding: 1em;
-  box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+  box-shadow: $box-shadow;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -130,7 +141,7 @@ main {
     }
     .icon--BG {
       opacity: 0;
-      background: linear-gradient(to right, #cf70c5, #9217cf);
+      background: linear-gradient(to right, $clr-secondary, $clr-primary);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -187,7 +198,7 @@ main {
         height: 0.25rem;
         width: 3rem;
         border: none;
-        background: #99e2d0;
+        background: $clr-tertiary;
         position: absolute;
         bottom: 0;
       }
@@ -201,7 +212,7 @@ main {
       align-items: center;
       font-size: 0.85rem;
       background: #fff;
-      box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+      box-shadow: $box-shadow;
       border-radius: 1.5rem;
       padding: 0;
       margin: 1em;
@@ -274,7 +285,7 @@ main {
     font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
-    background: linear-gradient(#ff79da, #9356dc);
+    background: linear-gradient($clr-secondary, $clr-primary);
     border: none;
     border-radius: 2rem;
     box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
@@ -284,7 +295,7 @@ main {
     &:hover {
       transform: scale(1.15);
 
-      box-shadow: 0 1rem 2rem rgba(20, 20, 20, 0.8);
+      box-shadow: $box-shadow--hover;
       background: linear-gradient(hsl(317, 100%, 85%), hsl(267, 66%, 75%));
     }
 

@@ -28,6 +28,7 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+/* VARIABLES */
 /* ANIMATIONS */
 /* Keyframes */
 @-webkit-keyframes loader {
@@ -89,6 +90,7 @@ body {
   }
 }
 
+/*------------------------*/
 .loader {
   background-color: whitesmoke;
   position: fixed;
@@ -158,8 +160,8 @@ body {
 .header_home {
   background: #fff;
   padding: 1em;
-  -webkit-box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
-          box-shadow: 0 0 0.5rem rgba(10, 10, 10, 0.329);
+  -webkit-box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+          box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
   position: relative;
 }
 
@@ -178,7 +180,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1.5em 1em;
-  background: #f3f3f3;
+  background: whitesmoke;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -201,8 +203,8 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 2rem;
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
-          box-shadow: 0.25rem 0.25rem 10px rgba(10, 10, 10, 0.329);
+  -webkit-box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+          box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
   padding: 0.75em 1.5em;
   margin-top: 1em;
   margin: auto;
@@ -276,10 +278,10 @@ body {
           align-items: center;
   padding: 1.5em;
   margin: 0.8em;
-  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
-          box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+          box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
   border-radius: 1.5rem;
-  background: #f7f7f7;
+  background: whitesmoke;
   position: relative;
 }
 
@@ -329,8 +331,8 @@ body {
   background: #fff;
   border-radius: 1rem;
   text-decoration: none;
-  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
-          box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
+          box-shadow: 0 0.5rem 0.5rem rgba(10, 10, 10, 0.329);
   color: inherit;
   display: block;
   position: relative;
@@ -402,8 +404,8 @@ body {
   position: absolute;
   opacity: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#cf70c5), to(#9217cf));
-  background: linear-gradient(to right, #cf70c5, #9217cf);
+  background: -webkit-gradient(linear, left top, right top, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to right, #ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
