@@ -311,6 +311,13 @@ $clr-tertiary: #99e2d0;
       }
     }
   }
+  figure{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    margin: auto;
+    border-radius: 1rem;
+  }
 }
 
 
