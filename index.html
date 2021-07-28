@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+      </style> 
     <script src="https://kit.fontawesome.com/06f20b66e3.js" crossorigin="anonymous">
     </script>
 
@@ -32,6 +34,9 @@
 
   <body>
     <section class="loader">
+      <div class="loader__title">
+        <h2>Loading</h2>
+      </div>
       <div class="loader__itemContainer">
          <div class="loader__item loader__item--1"></div>
          <div class="loader__item loader__item--2"></div>
@@ -47,11 +52,11 @@
     <main>
       <section class="where">
         <i class="fas fa-map-marker-alt clr-black"></i>
-        <span class="where__text">Paris, Belleville</span>
+        <h4 class="where__text">Paris, Belleville</h4>
       </section>
       <section class="about">
         <div class="container">
-          <h1 class="about__title">Réservez le menu qui vous convient</h1>
+          <h2 class="about__title">Réservez le menu qui vous convient</h2>
           <p class="about__content">
             Découvrez des restaurants d'exception, sélectionnés par nos soins
           </p>
@@ -62,7 +67,7 @@
         </div>
       </section>
       <section class="how">
-        <h1 class="how__title">Fonctionnement</h1>
+        <h2 class="how__title">Fonctionnement</h2>
         <div class="container">
           <ol>
             <li class="step">
@@ -86,7 +91,7 @@
       </section>
       <section id="restaurants" class="restaurants">
         <div class="container">
-          <h1 class="restaurants__title">Restaurants</h1>
+          <h2 class="restaurants__title">Restaurants</h2>
           <div class="cards">
             <a href="la-palette-du-gout.html" class="card">
               <img
@@ -97,7 +102,7 @@
               <span class="card__badge">Nouveau</span>
               <footer class="card__footer">
                 <div class="card__content">
-                  <h2 class="card__title">La palette du goût</h2>
+                  <h3 class="card__title">La palette du goût</h3>
                   <p class="card__text">Ménilmontant</p>
                 </div>
                 <div class="card__btn">
@@ -115,7 +120,7 @@
               <span class="card__badge">Nouveau</span>
               <footer class="card__footer">
                 <div class="card__content">
-                  <h2 class="card__title">La note enchantée</h2>
+                  <h3 class="card__title">La note enchantée</h3>
                   <p class="card__text">Charonne</p>
                 </div>
                 <div class="card__btn">
@@ -128,7 +133,7 @@
               <img class="card__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Présentation d'un plat au menu du restaurant A la Française"/>
               <footer class="card__footer">
                 <div class="card__content">
-                  <h2 class="card__title">À la française</h2>
+                  <h3 class="card__title">À la française</h3>
                   <p class="card__text">Cité Rouge</p>
                 </div>
                 <div class="card__btn">
@@ -145,7 +150,7 @@
               />
               <footer class="card__footer">
                 <div class="card__content">
-                  <h2 class="card__title">Le délice des sens</h2>
+                  <h3 class="card__title">Le délice des sens</h3>
                   <p class="card__text">Folie-Méricourt</p>
                 </div>
                 <div class="card__btn">
@@ -161,7 +166,7 @@
 
     <footer>
       <div class="container">
-        <h1 class="footer__logo">Ohmyfood</h1>
+        <h2 class="footer__logo">Ohmyfood</h2>
         <nav class="footer__nav">
           <ul class="footer__list">
             <li class="footer__list-item">

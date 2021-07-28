@@ -18,7 +18,7 @@ img {
 /* TYPO */
 /* Font-family */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
@@ -89,6 +89,11 @@ $clr-tertiary: #99e2d0;
   animation-fill-mode: both;
   z-index: 1000;
 }
+.loader__title{
+ color: #9256dc6e;
+ font-family: 'Shrikhand';
+ font-size:1.5rem;
+}
 .loader__itemContainer {
   width: 9rem;
   display: flex;
@@ -132,12 +137,13 @@ $clr-tertiary: #99e2d0;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  padding: 1.5em 1em;
+  // padding: 1em;
   background: whitesmoke;
   font-size: 1.2rem;
   font-weight: bold;
   .fa-map-marker-alt {
-    margin-right: 1em;
+    // margin-right: 1em;
+    padding: 1.2em;
   }
 }
 
@@ -306,6 +312,7 @@ $clr-tertiary: #99e2d0;
     }
   }
 }
+
 
 footer {
   
